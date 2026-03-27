@@ -1,0 +1,196 @@
+{
+  "timestamp": "20260327_120000",
+  "mode": "mock",
+  "stats_summary": {
+    "Mode": "MOCK",
+    "Total demos": 3,
+    "Total generation time": "1 ms",
+    "Engine model": "mistralai/mistral-small-2603",
+    "CoT steps configured": 3
+  },
+  "demos": [
+    {
+      "demo": 1,
+      "prompt": "Explain why the sky is blue",
+      "mode": "mock",
+      "graph": {
+        "prompt": "Explain why the sky is blue",
+        "version": 1,
+        "nodes": [
+          {
+            "id": "node_1",
+            "label": "Fact",
+            "content": "Sunlight contains the full visible spectrum (400\u2013700 nm). Earth\u2019s atmosphere consists mainly of nitrogen and oxygen molecules.",
+            "node_type": "fact",
+            "dependencies": [],
+            "edited": false,
+            "confidence": 0.98,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": null,
+            "alternatives": []
+          },
+          {
+            "id": "node_2",
+            "label": "Physics",
+            "content": "Rayleigh scattering: shorter wavelengths (blue \u2248450 nm) scatter roughly 10\u00d7 more than longer wavelengths (red \u2248700 nm) when photons interact with atmospheric molecules.",
+            "node_type": "reasoning",
+            "dependencies": ["node_1"],
+            "edited": false,
+            "confidence": 0.97,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": null,
+            "alternatives": []
+          },
+          {
+            "id": "node_3",
+            "label": "Conclusion",
+            "content": "The sky appears blue because scattered blue light reaches our eyes from every direction, while red/orange wavelengths travel more directly and only dominate at sunrise/sunset.",
+            "node_type": "conclusion",
+            "dependencies": ["node_2"],
+            "edited": false,
+            "confidence": 0.95,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": null,
+            "alternatives": []
+          }
+        ],
+        "generation_time_ms": 0.5,
+        "edit_count": 0,
+        "stats": {
+          "version": 1,
+          "node_count": 3,
+          "edit_count": 0,
+          "edited_nodes": 0,
+          "generation_time_ms": 0.5,
+          "avg_confidence": 0.967,
+          "low_confidence_count": 0,
+          "has_alternatives": false
+        }
+      },
+      "conclusion": "The sky appears blue because scattered blue light reaches our eyes from every direction, while red/orange wavelengths travel more directly and only dominate at sunrise/sunset."
+    },
+    {
+      "demo": 2,
+      "action": "edit_physics_and_recalculate",
+      "edited_node_id": "node_2",
+      "original_content": "Rayleigh scattering: shorter wavelengths (blue \u2248450 nm) scatter roughly 10\u00d7 more than longer wavelengths (red \u2248700 nm) when photons interact with atmospheric molecules.",
+      "new_content": "Because of clouds blocking and scattering light differently",
+      "new_conclusion": "Clouds scatter and absorb light differently than gas molecules. When clouds dominate the sky, they block and diffuse light, making the sky appear white or grey rather than blue.",
+      "graph": {
+        "prompt": "Explain why the sky is blue",
+        "version": 2,
+        "nodes": [
+          {
+            "id": "node_1",
+            "label": "Fact",
+            "content": "Sunlight contains the full visible spectrum (400\u2013700 nm). Earth\u2019s atmosphere consists mainly of nitrogen and oxygen molecules.",
+            "node_type": "fact",
+            "dependencies": [],
+            "edited": false,
+            "confidence": 0.98,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": null,
+            "alternatives": []
+          },
+          {
+            "id": "node_2",
+            "label": "Physics",
+            "content": "Because of clouds blocking and scattering light differently",
+            "node_type": "reasoning",
+            "dependencies": ["node_1"],
+            "edited": true,
+            "confidence": 0.97,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": "2026-03-27T12:00:00+00:00",
+            "alternatives": []
+          },
+          {
+            "id": "node_3",
+            "label": "Conclusion",
+            "content": "Clouds scatter and absorb light differently than gas molecules. When clouds dominate the sky, they block and diffuse light, making the sky appear white or grey rather than blue.",
+            "node_type": "conclusion",
+            "dependencies": ["node_2"],
+            "edited": false,
+            "confidence": 0.88,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": null,
+            "alternatives": []
+          }
+        ],
+        "generation_time_ms": 0.5,
+        "edit_count": 1,
+        "stats": {
+          "version": 2,
+          "node_count": 3,
+          "edit_count": 1,
+          "edited_nodes": 1,
+          "generation_time_ms": 0.5,
+          "avg_confidence": 0.943,
+          "low_confidence_count": 0,
+          "has_alternatives": false
+        }
+      },
+      "conclusion": "Clouds scatter and absorb light differently than gas molecules. When clouds dominate the sky, they block and diffuse light, making the sky appear white or grey rather than blue."
+    },
+    {
+      "demo": 3,
+      "prompt": "What is 15% of 240?",
+      "mode": "mock",
+      "graph": {
+        "prompt": "What is 15% of 240?",
+        "version": 1,
+        "nodes": [
+          {
+            "id": "node_1",
+            "label": "Setup",
+            "content": "Identify the operation: percentage calculation requires multiplying the base by (percent / 100).",
+            "node_type": "fact",
+            "dependencies": [],
+            "edited": false,
+            "confidence": 0.99,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": null,
+            "alternatives": []
+          },
+          {
+            "id": "node_2",
+            "label": "Computation",
+            "content": "Apply the formula: value \u00d7 (percent \u00f7 100). Follow standard order of operations.",
+            "node_type": "reasoning",
+            "dependencies": ["node_1"],
+            "edited": false,
+            "confidence": 0.98,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": null,
+            "alternatives": []
+          },
+          {
+            "id": "node_3",
+            "label": "Answer",
+            "content": "The computation yields the precise numerical result according to the formula.",
+            "node_type": "conclusion",
+            "dependencies": ["node_2"],
+            "edited": false,
+            "confidence": 0.97,
+            "created_at": "2026-03-27T12:00:00+00:00",
+            "edited_at": null,
+            "alternatives": []
+          }
+        ],
+        "generation_time_ms": 0.4,
+        "edit_count": 0,
+        "stats": {
+          "version": 1,
+          "node_count": 3,
+          "edit_count": 0,
+          "edited_nodes": 0,
+          "generation_time_ms": 0.4,
+          "avg_confidence": 0.98,
+          "low_confidence_count": 0,
+          "has_alternatives": false
+        }
+      },
+      "conclusion": "The computation yields the precise numerical result according to the formula."
+    }
+  ]
+}

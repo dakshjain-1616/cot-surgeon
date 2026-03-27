@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CoT Surgeon — Demo Report</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:860px;
+         margin:0 auto;padding:24px;background:#fff;color:#222}
+    h1{color:#1a1a2e;border-bottom:3px solid #6C63FF;padding-bottom:10px}
+    h2{color:#444}h3{color:#6C63FF}
+    .meta{background:#f0f4ff;padding:10px 16px;border-radius:6px;font-size:13px;margin:12px 0}
+    .demo-section{margin:28px 0;padding:20px;border:1px solid #ddd;border-radius:8px}
+    .node{border-left:4px solid;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px}
+    .conclusion{margin-top:14px;padding:10px 14px;background:#fff3e0;border-radius:6px}
+    table td,table th{padding:6px 10px;border-bottom:1px solid #eee}
+    .footer{margin-top:40px;font-size:12px;color:#888;text-align:center}
+    .badge{display:inline-block;padding:1px 6px;border-radius:8px;font-size:11px;font-weight:600;color:#fff}
+  </style>
+</head>
+<body>
+  <h1>🧠 CoT Surgeon — Demo Report</h1>
+  <div class="meta">
+    <strong>Generated:</strong> 20260327_120000 &nbsp;|&nbsp;
+    <strong>Mode:</strong> MOCK &nbsp;|&nbsp;
+    <strong>Demos:</strong> 3
+  </div>
+
+  <h2>Run Summary</h2>
+  <table style="border-collapse:collapse;width:100%;font-size:13px">
+    <tr style="background:#f0f4ff">
+      <th style="text-align:left;padding:6px 10px">Metric</th>
+      <th style="text-align:left;padding:6px 10px">Value</th>
+    </tr>
+    <tr><td>Mode</td><td><strong>MOCK</strong></td></tr>
+    <tr><td>Total demos</td><td><strong>3</strong></td></tr>
+    <tr><td>Total generation time</td><td><strong>1 ms</strong></td></tr>
+    <tr><td>Engine model</td><td><strong>mistralai/mistral-small-2603</strong></td></tr>
+    <tr><td>CoT steps configured</td><td><strong>3</strong></td></tr>
+  </table>
+
+  <h2>Reasoning Graphs</h2>
+
+  <div class="demo-section">
+    <h3>Demo 1: Explain why the sky is blue</h3>
+    <div class="node" style="border-left:4px solid #4CAF50;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#4CAF50">[Fact]</strong>
+      <span class="badge" style="background:#4CAF50">98%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">Sunlight contains the full visible spectrum (400–700 nm). Earth's atmosphere consists mainly of nitrogen and oxygen molecules.</p>
+    </div>
+    <div class="node" style="border-left:4px solid #2196F3;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#2196F3">[Physics]</strong>
+      <span class="badge" style="background:#4CAF50">97%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">Rayleigh scattering: shorter wavelengths (blue ≈450 nm) scatter roughly 10× more than longer wavelengths (red ≈700 nm) when photons interact with atmospheric molecules.</p>
+    </div>
+    <div class="node" style="border-left:4px solid #FF9800;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#FF9800">[Conclusion]</strong>
+      <span class="badge" style="background:#4CAF50">95%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">The sky appears blue because scattered blue light reaches our eyes from every direction, while red/orange wavelengths travel more directly and only dominate at sunrise/sunset.</p>
+    </div>
+    <div class="conclusion"><strong>Conclusion:</strong> The sky appears blue because scattered blue light reaches our eyes from every direction, while red/orange wavelengths travel more directly and only dominate at sunrise/sunset.</div>
+    <div style="font-size:11px;color:#888;margin-top:8px">v1 · 3 nodes · avg confidence 97% · generated in 1 ms</div>
+  </div>
+
+  <div class="demo-section">
+    <h3>Demo 2: Edit &amp; Recalculate</h3>
+    <div class="node" style="border-left:4px solid #4CAF50;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#4CAF50">[Fact]</strong>
+      <span class="badge" style="background:#4CAF50">98%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">Sunlight contains the full visible spectrum (400–700 nm). Earth's atmosphere consists mainly of nitrogen and oxygen molecules.</p>
+    </div>
+    <div class="node" style="border-left:4px solid #9C27B0;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#9C27B0">[Physics]</strong> <em style="color:#9C27B0;font-weight:600">(edited)</em>
+      <span class="badge" style="background:#4CAF50">97%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <span style="font-size:10px;color:#9C27B0"> · edited 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">Because of clouds blocking and scattering light differently</p>
+    </div>
+    <div class="node" style="border-left:4px solid #FF9800;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#FF9800">[Conclusion]</strong>
+      <span class="badge" style="background:#4CAF50">88%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">Clouds scatter and absorb light differently than gas molecules. When clouds dominate the sky, they block and diffuse light, making the sky appear white or grey rather than blue.</p>
+    </div>
+    <div class="conclusion"><strong>Conclusion:</strong> Clouds scatter and absorb light differently than gas molecules. When clouds dominate the sky, they block and diffuse light, making the sky appear white or grey rather than blue.</div>
+    <div style="font-size:11px;color:#888;margin-top:8px">v2 · 3 nodes · avg confidence 94% · generated in 1 ms · 1 edit</div>
+  </div>
+
+  <div class="demo-section">
+    <h3>Demo 3: What is 15% of 240?</h3>
+    <div class="node" style="border-left:4px solid #4CAF50;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#4CAF50">[Setup]</strong>
+      <span class="badge" style="background:#4CAF50">99%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">Identify the operation: percentage calculation requires multiplying the base by (percent / 100).</p>
+    </div>
+    <div class="node" style="border-left:4px solid #2196F3;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#2196F3">[Computation]</strong>
+      <span class="badge" style="background:#4CAF50">98%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">Apply the formula: value × (percent ÷ 100). Follow standard order of operations.</p>
+    </div>
+    <div class="node" style="border-left:4px solid #FF9800;padding:10px;margin:8px 0;background:#f8f9fa;border-radius:4px;">
+      <strong style="color:#FF9800">[Answer]</strong>
+      <span class="badge" style="background:#4CAF50">97%</span>
+      <span style="font-size:10px;color:#888"> · created 2026-03-27T12:00:00+00:00</span>
+      <p style="margin:6px 0 0 0;line-height:1.5">The computation yields the precise numerical result according to the formula.</p>
+    </div>
+    <div class="conclusion"><strong>Conclusion:</strong> The computation yields the precise numerical result according to the formula.</div>
+    <div style="font-size:11px;color:#888;margin-top:8px">v1 · 3 nodes · avg confidence 98% · generated in 0 ms</div>
+  </div>
+
+  <div class="footer">
+    Generated by <a href="https://github.com/dakshjain-1616/cot-surgeon">CoT Surgeon</a>
+    — made autonomously with <a href="https://heyneo.so">NEO</a>
+  </div>
+</body>
+</html>

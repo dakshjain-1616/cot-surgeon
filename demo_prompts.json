@@ -1,0 +1,52 @@
+[
+  {
+    "label": "Sky color",
+    "prompt": "Explain why the sky is blue",
+    "tags": ["science", "physics"]
+  },
+  {
+    "label": "Gravity",
+    "prompt": "Why do objects fall towards the Earth?",
+    "tags": ["science", "physics"]
+  },
+  {
+    "label": "Percentage math",
+    "prompt": "What is 15% of 240?",
+    "tags": ["math", "arithmetic"]
+  },
+  {
+    "label": "Boiling water",
+    "prompt": "Why does water boil at 100°C at sea level?",
+    "tags": ["science", "chemistry"]
+  },
+  {
+    "label": "Rainbows",
+    "prompt": "How is a rainbow formed?",
+    "tags": ["science", "optics"]
+  },
+  {
+    "label": "Photosynthesis",
+    "prompt": "Explain how plants make energy from sunlight",
+    "tags": ["biology", "science"]
+  },
+  {
+    "label": "Interest calculation",
+    "prompt": "If I invest $1000 at 5% annual compound interest, how much do I have after 3 years?",
+    "tags": ["math", "finance"]
+  },
+  {
+    "label": "Black holes",
+    "prompt": "Why can't light escape from a black hole?",
+    "tags": ["science", "astrophysics"]
+  },
+  {
+    "label": "DNA replication",
+    "prompt": "How does DNA replication work?",
+    "tags": ["biology", "genetics"]
+  },
+  {
+    "label": "Seasons",
+    "prompt": "Why do we have seasons on Earth?",
+    "tags": ["science", "astronomy"]
+  }
+]

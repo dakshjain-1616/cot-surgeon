@@ -1,0 +1,35 @@
+%% CoT Surgeon — Generated Reasoning Graphs
+%% Timestamp: 20260327_120000  Mode: mock
+
+%% Demo 1: Explain why the sky is blue
+graph TD
+    node_1["Fact\nSunlight contains the full visible spectrum (400–700 nm..."]
+    node_2["Physics\nRayleigh scattering: shorter wavelengths (blue ≈450 nm)..."]
+    node_3["Conclusion\nThe sky appears blue because scattered blue light reac..."]
+    node_1 --> node_2
+    node_2 --> node_3
+    style node_1 fill:#4CAF50,color:#fff
+    style node_2 fill:#2196F3,color:#fff
+    style node_3 fill:#FF9800,color:#fff
+
+%% Demo 2: After editing [Physics] → "Because of clouds…"
+graph TD
+    node_1["Fact\nSunlight contains the full visible spectrum (400–700 nm..."]
+    node_2["Physics\nBecause of clouds blocking and scattering light differ..."]
+    node_3["Conclusion\nClouds scatter and absorb light differently than gas m..."]
+    node_1 --> node_2
+    node_2 --> node_3
+    style node_1 fill:#4CAF50,color:#fff
+    style node_2 fill:#9C27B0,color:#fff
+    style node_3 fill:#FF9800,color:#fff
+
+%% Demo 3: What is 15% of 240?
+graph TD
+    node_1["Setup\nIdentify the operation: percentage calculation requires..."]
+    node_2["Computation\nApply the formula: value × (percent ÷ 100). Follow sta..."]
+    node_3["Answer\nThe computation yields the precise numerical result acc..."]
+    node_1 --> node_2
+    node_2 --> node_3
+    style node_1 fill:#4CAF50,color:#fff
+    style node_2 fill:#2196F3,color:#fff
+    style node_3 fill:#FF9800,color:#fff
