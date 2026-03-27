@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 320" width="860" height="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+    <filter id="shadow-node" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6e7681"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0969da"/>
+    </marker>
+    <marker id="arrowhead-node" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#8b949e"/>
+    </marker>
+    <marker id="arrowhead-edit" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#8250df"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="320" fill="#ffffff" rx="12"/>
+  <rect width="860" height="320" fill="none" stroke="#d0d7de" stroke-width="1" rx="12"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="860" height="38" fill="#f6f8fa" rx="12"/>
+  <rect x="0" y="26" width="860" height="12" fill="#f6f8fa"/>
+  <rect x="0" y="37" width="860" height="1" fill="#d0d7de"/>
+  <text x="430" y="24" text-anchor="middle" font-size="13" font-weight="600" fill="#24292f">CoT Surgeon — Reasoning Graph Structure</text>
+
+  <!-- ══════════ LEFT: Raw LLM Output ══════════ -->
+  <rect x="18" y="56" width="148" height="224" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.2" rx="8" filter="url(#shadow)"/>
+  <text x="92" y="76" text-anchor="middle" font-size="11" font-weight="600" fill="#57606a">Raw LLM Output</text>
+  <rect x="28" y="82" width="128" height="1" fill="#d0d7de"/>
+
+  <!-- wavy text lines suggesting unstructured prose -->
+  <path d="M34 98 Q50 94 66 98 Q82 102 98 98 Q114 94 130 98 Q140 100 146 98" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M34 112 Q52 108 70 112 Q88 116 106 112 Q124 108 142 112" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M34 126 Q46 122 58 126 Q70 130 82 126 Q94 122 106 126 Q118 130 130 126 Q138 124 146 126" stroke="#8b949e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M34 140 Q55 136 76 140 Q97 144 118 140 Q133 137 146 140" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M34 154 Q48 150 62 154 Q76 158 90 154 Q104 150 118 154 Q130 157 142 154" stroke="#8b949e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M34 168 Q54 164 74 168 Q94 172 114 168 Q128 165 142 168" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M34 182 Q46 178 58 182 Q72 186 88 182 Q102 178 116 182 Q128 185 140 182" stroke="#8b949e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M34 196 Q52 192 70 196 Q88 200 106 196 Q122 193 138 196" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M34 210 Q50 206 66 210 Q80 214 94 210 Q108 206 122 210 Q132 213 142 210" stroke="#8b949e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M34 224 Q55 220 76 224 Q97 228 112 224 Q126 221 142 224" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M34 238 Q46 234 60 238 Q74 242 90 238 Q106 234 120 238 Q132 241 142 238" stroke="#8b949e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M34 252 Q52 248 70 252 Q88 256 100 252 Q116 248 136 252" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+
+  <!-- ══════════ CENTER: Arrow & label ══════════ -->
+  <line x1="170" y1="168" x2="214" y2="168" stroke="#0969da" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#arrowhead-blue)"/>
+  <text x="192" y="156" text-anchor="middle" font-size="9.5" fill="#0969da" font-weight="600">Parse &amp;</text>
+  <text x="192" y="167" text-anchor="middle" font-size="9.5" fill="#0969da" font-weight="600">Structure</text>
+  <text x="192" y="178" text-anchor="middle" font-size="9.5" fill="#0969da" font-weight="600">→</text>
+
+  <!-- ══════════ RIGHT: Nodes ══════════ -->
+  <!-- We lay out 5 nodes vertically from y=55 to y=270, connected by arrows -->
+
+  <!-- NODE 1 — FACT (green) -->
+  <rect x="222" y="55" width="248" height="40" fill="#dafbe1" stroke="#2da44e" stroke-width="1.5" rx="7" filter="url(#shadow-node)"/>
+  <rect x="222" y="55" width="44" height="40" fill="#2da44e" rx="7"/>
+  <rect x="244" y="55" width="22" height="40" fill="#2da44e"/>
+  <text x="244" y="70" text-anchor="middle" font-size="8.5" font-weight="700" fill="#ffffff">FACT</text>
+  <text x="244" y="82" text-anchor="middle" font-size="7.5" fill="#dcffe4">N1</text>
+  <text x="358" y="71" text-anchor="middle" font-size="10.5" fill="#1a7f37" font-weight="500">Sky contains N₂, O₂, and particles</text>
+  <!-- confidence badge -->
+  <rect x="451" y="61" width="32" height="14" fill="#2da44e" rx="7"/>
+  <text x="467" y="72" text-anchor="middle" font-size="8.5" font-weight="700" fill="#ffffff">0.95</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="346" y1="95" x2="346" y2="108" stroke="#8b949e" stroke-width="1.4" marker-end="url(#arrowhead-node)"/>
+
+  <!-- NODE 2 — FACT (green) -->
+  <rect x="222" y="108" width="248" height="40" fill="#dafbe1" stroke="#2da44e" stroke-width="1.5" rx="7" filter="url(#shadow-node)"/>
+  <rect x="222" y="108" width="44" height="40" fill="#2da44e" rx="7"/>
+  <rect x="244" y="108" width="22" height="40" fill="#2da44e"/>
+  <text x="244" y="123" text-anchor="middle" font-size="8.5" font-weight="700" fill="#ffffff">FACT</text>
+  <text x="244" y="135" text-anchor="middle" font-size="7.5" fill="#dcffe4">N2</text>
+  <text x="358" y="124" text-anchor="middle" font-size="10.5" fill="#1a7f37" font-weight="500">Sunlight = white light with all wavelengths</text>
+  <rect x="451" y="114" width="32" height="14" fill="#2da44e" rx="7"/>
+  <text x="467" y="125" text-anchor="middle" font-size="8.5" font-weight="700" fill="#ffffff">0.92</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="346" y1="148" x2="346" y2="161" stroke="#8b949e" stroke-width="1.4" marker-end="url(#arrowhead-node)"/>
+
+  <!-- NODE 3 — REASONING (blue) — LOW CONFIDENCE + edit panel -->
+  <rect x="222" y="161" width="248" height="40" fill="#ddf4ff" stroke="#0969da" stroke-width="1.5" rx="7" filter="url(#shadow-node)"/>
+  <rect x="222" y="161" width="56" height="40" fill="#0969da" rx="7"/>
+  <rect x="256" y="161" width="22" height="40" fill="#0969da"/>
+  <text x="250" y="176" text-anchor="middle" font-size="7.5" font-weight="700" fill="#ffffff">REASONING</text>
+  <text x="250" y="188" text-anchor="middle" font-size="7.5" fill="#cae8ff">N3</text>
+  <text x="358" y="176" text-anchor="middle" font-size="10" fill="#0550ae" font-weight="500">Rayleigh scattering: short λ scattered more</text>
+  <!-- low-confidence badge (amber) -->
+  <rect x="446" y="167" width="42" height="14" fill="#fb8f44" rx="7"/>
+  <text x="467" y="178" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">⚠ 0.78</text>
+
+  <!-- Edit panel to the right of node 3 -->
+  <rect x="498" y="157" width="150" height="48" fill="#fffbdd" stroke="#d4a72c" stroke-width="1.2" rx="6" filter="url(#shadow)"/>
+  <!-- dashed connector from node3 to edit panel -->
+  <line x1="492" y1="181" x2="498" y2="181" stroke="#8250df" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arrowhead-edit)"/>
+  <!-- pencil icon (simple SVG path) -->
+  <g transform="translate(509, 168)">
+    <path d="M0 10 L8 2 L12 6 L4 14 Z" fill="none" stroke="#8250df" stroke-width="1.3" stroke-linejoin="round"/>
+    <line x1="6" y1="4" x2="10" y2="8" stroke="#8250df" stroke-width="1.3"/>
+    <line x1="0" y1="10" x2="0" y2="14" stroke="#8250df" stroke-width="1.3"/>
+    <line x1="0" y1="14" x2="4" y2="14" stroke="#8250df" stroke-width="1.3"/>
+  </g>
+  <text x="527" y="179" font-size="9.5" font-weight="600" fill="#8250df">Edit node</text>
+  <text x="509" y="194" font-size="9" fill="#6e7681">Recalculate downstream ↓</text>
+  <line x1="509" y1="198" x2="639" y2="198" stroke="#d4a72c" stroke-width="0.7" stroke-dasharray="2 2"/>
+
+  <!-- Arrow 3→4 -->
+  <line x1="346" y1="201" x2="346" y2="214" stroke="#8b949e" stroke-width="1.4" marker-end="url(#arrowhead-node)"/>
+
+  <!-- NODE 4 — REASONING (blue) -->
+  <rect x="222" y="214" width="248" height="40" fill="#ddf4ff" stroke="#0969da" stroke-width="1.5" rx="7" filter="url(#shadow-node)"/>
+  <rect x="222" y="214" width="56" height="40" fill="#0969da" rx="7"/>
+  <rect x="256" y="214" width="22" height="40" fill="#0969da"/>
+  <text x="250" y="229" text-anchor="middle" font-size="7.5" font-weight="700" fill="#ffffff">REASONING</text>
+  <text x="250" y="241" text-anchor="middle" font-size="7.5" fill="#cae8ff">N4</text>
+  <text x="350" y="230" text-anchor="middle" font-size="10" fill="#0550ae" font-weight="500">Blue (λ≈450nm) scattered ~5.5× more than red</text>
+  <rect x="451" y="220" width="32" height="14" fill="#0969da" rx="7"/>
+  <text x="467" y="231" text-anchor="middle" font-size="8.5" font-weight="700" fill="#ffffff">0.88</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="346" y1="254" x2="346" y2="267" stroke="#8b949e" stroke-width="1.4" marker-end="url(#arrowhead-node)"/>
+
+  <!-- NODE 5 — CONCLUSION (orange) -->
+  <rect x="222" y="267" width="248" height="40" fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5" rx="7" filter="url(#shadow-node)"/>
+  <rect x="222" y="267" width="72" height="40" fill="#bc4c00" rx="7"/>
+  <rect x="272" y="267" width="22" height="40" fill="#bc4c00"/>
+  <text x="257" y="282" text-anchor="middle" font-size="7.5" font-weight="700" fill="#ffffff">CONCLUSION</text>
+  <text x="257" y="294" text-anchor="middle" font-size="7.5" fill="#ffd8b2">N5</text>
+  <text x="358" y="283" text-anchor="middle" font-size="10.5" fill="#bc4c00" font-weight="500">Sky appears blue from all directions</text>
+  <rect x="451" y="273" width="32" height="14" fill="#bc4c00" rx="7"/>
+  <text x="467" y="284" text-anchor="middle" font-size="8.5" font-weight="700" fill="#ffffff">0.91</text>
+
+  <!-- ══════════ Footer ══════════ -->
+  <rect x="0" y="308" width="860" height="12" fill="#f6f8fa" rx="0"/>
+  <rect x="0" y="308" width="860" height="1" fill="#d0d7de"/>
+  <rect x="0" y="308" width="860" height="12" fill="#f6f8fa"/>
+  <rect x="0" y="308" width="860" height="12" rx="12" fill="none"/>
+  <rect x="0" y="316" width="860" height="4" fill="#f6f8fa" rx="12"/>
+  <text x="430" y="318" text-anchor="middle" font-size="9" fill="#8b949e">Fact → Reasoning → Conclusion  ·  Per-node confidence  ·  Surgical edit + recalculate  ·  Mermaid export</text>
+
+  <!-- Footer bar -->
+  <rect x="0" y="307" width="860" height="13" fill="#f6f8fa"/>
+  <rect x="0" y="307" width="860" height="1" fill="#d0d7de"/>
+  <rect x="0" y="319" width="860" height="1" fill="#d0d7de"/>
+  <text x="430" y="316" text-anchor="middle" font-size="9" fill="#6e7681">Fact → Reasoning → Conclusion  ·  Per-node confidence  ·  Surgical edit + recalculate  ·  Mermaid export</text>
+</svg>

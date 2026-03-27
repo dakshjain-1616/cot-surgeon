@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 200" width="860" height="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#8b949e"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="200" fill="#ffffff" rx="12"/>
+  <rect width="860" height="200" fill="none" stroke="#d0d7de" stroke-width="1" rx="12"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="860" height="38" fill="#f6f8fa" rx="12"/>
+  <rect x="0" y="26" width="860" height="12" fill="#f6f8fa"/>
+  <rect x="0" y="37" width="860" height="1" fill="#d0d7de"/>
+  <text x="430" y="24" text-anchor="middle" font-size="13" font-weight="600" fill="#24292f">LLM Backends — Priority Order</text>
+
+  <!-- ══════════ BOX 1: OpenRouter (blue) ══════════ -->
+  <rect x="28" y="54" width="234" height="118" fill="#ddf4ff" stroke="#0969da" stroke-width="1.8" rx="10" filter="url(#shadow)"/>
+  <!-- top accent bar -->
+  <rect x="28" y="54" width="234" height="8" fill="#0969da" rx="10"/>
+  <rect x="28" y="58" width="234" height="4" fill="#0969da"/>
+  <!-- priority badge -->
+  <circle cx="48" cy="80" r="11" fill="#0969da"/>
+  <text x="48" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">1</text>
+  <!-- title -->
+  <text x="70" y="76" font-size="15" font-weight="700" fill="#0550ae">OpenRouter</text>
+  <!-- API badge -->
+  <rect x="192" y="65" width="34" height="16" fill="#0969da" rx="8"/>
+  <text x="209" y="77" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">API</text>
+  <!-- subtitle -->
+  <text x="40" y="100" font-size="11" fill="#57606a" font-weight="500">Cloud LLMs</text>
+  <rect x="40" y="106" width="210" height="1" fill="#b6e3ff"/>
+  <!-- details -->
+  <text x="40" y="122" font-size="9.5" fill="#0550ae">OPENROUTER_API_KEY set</text>
+  <text x="40" y="137" font-size="9.5" fill="#0550ae">mistral-small, GPT-4,</text>
+  <text x="40" y="150" font-size="9.5" fill="#0550ae">Claude, Gemini</text>
+  <!-- URL hint -->
+  <text x="40" y="164" font-size="8.5" fill="#8b949e">openrouter.ai/api/v1</text>
+
+  <!-- fallback arrow 1→2 -->
+  <line x1="263" y1="113" x2="295" y2="113" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="279" y="106" text-anchor="middle" font-size="8.5" fill="#8b949e" font-weight="500">fallback</text>
+  <text x="279" y="116" text-anchor="middle" font-size="9" fill="#8b949e">→</text>
+
+  <!-- ══════════ BOX 2: Local llama.cpp (purple) ══════════ -->
+  <rect x="298" y="54" width="234" height="118" fill="#fbefff" stroke="#8250df" stroke-width="1.8" rx="10" filter="url(#shadow)"/>
+  <rect x="298" y="54" width="234" height="8" fill="#8250df" rx="10"/>
+  <rect x="298" y="58" width="234" height="4" fill="#8250df"/>
+  <circle cx="318" cy="80" r="11" fill="#8250df"/>
+  <text x="318" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">2</text>
+  <text x="340" y="76" font-size="15" font-weight="700" fill="#6639ba">Local llama.cpp</text>
+  <rect x="462" y="65" width="42" height="16" fill="#8250df" rx="8"/>
+  <text x="483" y="77" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">LOCAL</text>
+  <text x="310" y="100" font-size="11" fill="#57606a" font-weight="500">Private / Offline</text>
+  <rect x="310" y="106" width="210" height="1" fill="#e2c5ff"/>
+  <text x="310" y="122" font-size="9.5" fill="#6639ba">LLAMA_MODEL_PATH</text>
+  <text x="310" y="137" font-size="9.5" fill="#6639ba">→ GGUF model file</text>
+  <text x="310" y="152" font-size="9.5" fill="#6639ba">LLAMA_THREADS=4</text>
+  <text x="310" y="164" font-size="8.5" fill="#8b949e">llama-cpp-python binding</text>
+
+  <!-- fallback arrow 2→3 -->
+  <line x1="533" y1="113" x2="565" y2="113" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="549" y="106" text-anchor="middle" font-size="8.5" fill="#8b949e" font-weight="500">fallback</text>
+  <text x="549" y="116" text-anchor="middle" font-size="9" fill="#8b949e">→</text>
+
+  <!-- ══════════ BOX 3: Mock (gray) ══════════ -->
+  <rect x="568" y="54" width="264" height="118" fill="#f6f8fa" stroke="#57606a" stroke-width="1.8" rx="10" filter="url(#shadow)"/>
+  <rect x="568" y="54" width="264" height="8" fill="#57606a" rx="10"/>
+  <rect x="568" y="58" width="264" height="4" fill="#57606a"/>
+  <circle cx="588" cy="80" r="11" fill="#57606a"/>
+  <text x="588" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">3</text>
+  <text x="610" y="76" font-size="15" font-weight="700" fill="#24292f">Mock</text>
+  <rect x="762" y="65" width="42" height="16" fill="#57606a" rx="8"/>
+  <text x="783" y="77" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">MOCK</text>
+  <text x="580" y="100" font-size="11" fill="#57606a" font-weight="500">No setup needed</text>
+  <rect x="580" y="106" width="240" height="1" fill="#d0d7de"/>
+  <text x="580" y="122" font-size="9.5" fill="#24292f">Keyword-based SQL templates</text>
+  <text x="580" y="137" font-size="9.5" fill="#24292f">10 built-in topics (sky, math,</text>
+  <text x="580" y="152" font-size="9.5" fill="#24292f">gravity, DNA, rainbows…)</text>
+  <text x="580" y="164" font-size="8.5" fill="#8b949e">Perfect for demos &amp; CI</text>
+
+  <!-- ══════════ Bottom note ══════════ -->
+  <rect x="0" y="180" width="860" height="20" fill="#f6f8fa"/>
+  <rect x="0" y="180" width="860" height="1" fill="#d0d7de"/>
+  <rect x="0" y="180" width="860" height="20" rx="12" fill="none"/>
+  <rect x="0" y="188" width="860" height="12" fill="#f6f8fa" rx="12"/>
+  <text x="430" y="194" text-anchor="middle" font-size="9.5" fill="#6e7681">Auto mode detects which backend to use automatically — set  mode='auto'  or  mode='mock'</text>
+</svg>
